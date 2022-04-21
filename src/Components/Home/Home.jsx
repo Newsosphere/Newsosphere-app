@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Card from '../Card/Card'
+import RoundButton from '../RoundButton/RoundButton'
 import Globe from '../../Images/Globe.svg'
 
 // Styles
@@ -17,12 +18,14 @@ export default function Home() {
                         <Card width={282} height={289}>
                             <h2>"Weather"</h2>
                             <p style={{ textAlign: "center" }}>Know about the<br></br> weather conditions of<br></br> any place around the <br></br>globe.</p>
+                            <RoundButton />
                         </Card>
                     </Link>
                     <Link to="/news">
                         <Card width={282} height={289}>
                             <h2>"News"</h2>
                             <p style={{ textAlign: "center" }}>Stay up to date<br></br>regarding the national<br></br>and international<br></br>affairs.</p>
+                            <RoundButton />
                         </Card>
                     </Link>
                 </div>

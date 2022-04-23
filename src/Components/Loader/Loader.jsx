@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Styles
+import './Loader.css'
+
 const Loader = () => {
     return (
         <div className='loader-svg'>
@@ -26,7 +29,7 @@ const Loader = () => {
                     cx='50'
                     cy='50'
                     r='20'
-                    stroke='#F06543'
+                    stroke='#4FCAFF'
                     stroke-dasharray='47.1 141.3'
                     stroke-width='3'
                     fill='none'

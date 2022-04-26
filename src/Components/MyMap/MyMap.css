@@ -1,0 +1,28 @@
+.MyMap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MyMap-container {
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.MyMap-popup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.MyMap-popup-container>h2,
+.MyMap-popup-container>h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.MyMap-popup-container>h3 {
+    opacity: 0.7;
+}

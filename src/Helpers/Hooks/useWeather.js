@@ -166,6 +166,8 @@ const useWeather = () => {
             .then(
                 (result) => {
                     setCity(result.name);
+                    console.log(result);
+                    setCityRes(result)
                     setIsLoaded(true);
                 },
                 (error) => {

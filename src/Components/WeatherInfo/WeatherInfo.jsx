@@ -1,7 +1,7 @@
 import React from 'react';
 import { Droplet, Wind, Thermometer } from 'react-feather';
 import HourlyForecast from '../HourlyForecast/HourlyForecast';
-// import DailyForecast from '../helpers/DailyForecast';
+import DailyForecast from '../DailyForecast/DailyForecast';
 import weatherIcon from '../../Helpers/weatherIcon';
 import moment from 'moment'
 import 'moment-timezone'
@@ -84,6 +84,7 @@ const WeatherInfo = ({ results, city }) => {
                     </div>
                 </div>
             </div>
+            <DailyForecast results={results} />
         </>
     )
 }

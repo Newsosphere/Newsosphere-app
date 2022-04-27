@@ -1,6 +1,6 @@
 import React from 'react';
 import { Droplet, Wind, Thermometer } from 'react-feather';
-// import HourlyForecast from '../helpers/HourlyForecast';
+import HourlyForecast from '../HourlyForecast/HourlyForecast';
 // import DailyForecast from '../helpers/DailyForecast';
 import weatherIcon from '../../Helpers/weatherIcon';
 import moment from 'moment'
@@ -8,7 +8,7 @@ import 'moment-timezone'
 
 const WeatherInfo = ({ results, city }) => {
 
-    console.log(city);
+    // console.log(city);
     // console.log(results);
 
     var datee = new Date(city.dt * 1000);
@@ -75,6 +75,12 @@ const WeatherInfo = ({ results, city }) => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className="hourly-chart">
+                    <h2>Hourly Forecast</h2>
+                    <div>
+                        <HourlyForecast results={results} />
                     </div>
                 </div>
             </div>

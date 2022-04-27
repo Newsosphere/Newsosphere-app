@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import MyMap from '../MyMap/MyMap';
 import Loader from "../Loader/Loader";
 import WeatherInfo from "../WeatherInfo/WeatherInfo";
+// import HourlyForecast from "../HourlyForecast/HourlyForecast";
 // import RequiredThings from "../../components/RequiredThings";
 import useWeather from '../../Helpers/Hooks/useWeather'
 import SearchOption from '../../Helpers/SearchOption'

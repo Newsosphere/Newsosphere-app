@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import MyMap from '../MyMap/MyMap';
 import Loader from "../Loader/Loader";
-// import WeatherCard from "../../components/WeatherCard";
-// import RequiredThings from "../../components/RequiredThings";
+import WeatherInfo from "../WeatherInfo/WeatherInfo";
+// import HourlyForecast from "../HourlyForecast/HourlyForecast";
+import RequiredItems from "../RequiredItems/RequiredItems";
 import useWeather from '../../Helpers/Hooks/useWeather'
 import SearchOption from '../../Helpers/SearchOption'
 
@@ -70,6 +71,19 @@ const Weather = () => {
                         </div>
                     </div>
                 </div>
+            )}
+
+            {isLoaded && results && error == null && (
+                <>
+                    <WeatherInfo
+                        results={results}
+                        city={cityRes}
+                        changeUnit={changeUnit}
+                    />
+                    <div>
+                        <RequiredItems results={cityRes} />
+                    </div>
+                </>
             )}
         </>
     );

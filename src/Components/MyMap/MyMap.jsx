@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMapEvent, } from "react-leaflet";
 
+import './MyMap.css'
+
 const zoom = 13;
 
 const LocationMarker = ({ center, name, temp, fetchWeatherUsingCoordinates, }) => {
@@ -15,6 +17,7 @@ const LocationMarker = ({ center, name, temp, fetchWeatherUsingCoordinates, }) =
 
     useMapEvent("click", (e) => {
         setPosition(e.latlng);
+        console.log(e.latlng);
         fetchWeatherUsingCoordinates(e.latlng);
     });
 

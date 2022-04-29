@@ -159,13 +159,16 @@ const useWeather = () => {
     }, [longi]);
 
     const fetchWeatherUsingCoordinates = ({ lat, lng }) => {
+        let unit = useFahrenheit ? "imperial" : "metric";
         fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${process.env.REACT_APP_APIKEY}`
+            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=${unit}&appid=${process.env.REACT_APP_APIKEY}`
         )
             .then((res) => res.json())
             .then(
                 (result) => {
                     setCity(result.name);
+                    // console.log(result);
+                    setCityRes(result)
                     setIsLoaded(true);
                 },
                 (error) => {

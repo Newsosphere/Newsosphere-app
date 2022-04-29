@@ -15,13 +15,12 @@ function DailyForecast({ results }) {
             <div className="daily-forecast">
                 {results.daily.map((dayWeather, index) => {
                     const t = new Date(dayWeather.dt * 1000);
-                    const avgTemp = dayWeather.temp.min + dayWeather.temp.max / 2;
+                    const avgTemp = (dayWeather.temp.min + dayWeather.temp.max) / 2;
                     return (
                         index === 0 || index === 7 ? <></> :
                             <div className="daily-div">
                                 <h3>
                                     {dayss[t.getDay()]}, {t.getDate()} {month[t.getMonth()]}
-                                    {console.log(t.getDay())}
                                 </h3>
 
                                 <div className="dailyweather-icondiv">

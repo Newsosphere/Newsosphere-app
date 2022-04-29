@@ -3,7 +3,7 @@ import MyMap from '../MyMap/MyMap';
 import Loader from "../Loader/Loader";
 import WeatherInfo from "../WeatherInfo/WeatherInfo";
 // import HourlyForecast from "../HourlyForecast/HourlyForecast";
-// import RequiredThings from "../../components/RequiredThings";
+import RequiredItems from "../RequiredItems/RequiredItems";
 import useWeather from '../../Helpers/Hooks/useWeather'
 import SearchOption from '../../Helpers/SearchOption'
 
@@ -74,11 +74,16 @@ const Weather = () => {
             )}
 
             {isLoaded && results && error == null && (
-                <WeatherInfo
-                    results={results}
-                    city={cityRes}
-                    changeUnit={changeUnit}
-                />
+                <>
+                    <WeatherInfo
+                        results={results}
+                        city={cityRes}
+                        changeUnit={changeUnit}
+                    />
+                    <div>
+                        <RequiredItems results={cityRes} />
+                    </div>
+                </>
             )}
         </>
     );

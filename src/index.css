@@ -7,6 +7,7 @@ body {
   background: url("./Images/Background.svg") no-repeat fixed center;
   background-size: cover;
   color: #353535;
+  height: 100vh;
 }
 
 code {
@@ -17,4 +18,12 @@ code {
 a{
   text-decoration: none;
   color: #353535;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }

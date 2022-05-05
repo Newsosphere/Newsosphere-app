@@ -58,7 +58,7 @@ const Map = ({ lon, lat, name, temp, fetchWeatherUsingCoordinates }) => {
 
     const displayMap = (
         <MapContainer
-            center={mapCenter}
+            center={position}
             zoom={zoom}
             whenCreated={setMap}
             doubleClickZoom={true}

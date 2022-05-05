@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import requiredItems from "../../Helpers/requiredItems";
 
+// Styles
+import './RequiredItems.css'
+
 const RequiredItems = (props) => {
     const [items, setItems] = useState([]);
 

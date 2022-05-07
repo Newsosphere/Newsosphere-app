@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMapEvent, } from "react-leaf
 
 import './MyMap.css'
 
-const zoom = 13;
+const zoom = 1;
 
 const LocationMarker = ({ center, name, temp, fetchWeatherUsingCoordinates, }) => {
 

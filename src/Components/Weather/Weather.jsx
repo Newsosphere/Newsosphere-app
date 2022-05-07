@@ -7,6 +7,9 @@ import RequiredItems from "../RequiredItems/RequiredItems";
 import useWeather from '../../Helpers/Hooks/useWeather'
 import SearchOption from '../../Helpers/SearchOption'
 
+// Styles
+import './Weather.css'
+
 const Weather = () => {
     const {
         city,
@@ -44,46 +47,45 @@ const Weather = () => {
             )}
 
             {results && (
-                <div>
-                    <div className="locator">
-                        <div className="searchbox">
-                            <div>
+                <div className="Weather">
+                    <div className="Weather-container">
+                        <div className="Weather-search-map">
+                            <div className="Weather-subheading">
                                 <h2>Enter a city below 👇</h2>
                             </div>
-                            <SearchOption
-                                city={city}
-                                onChange={(event) => setCity(event.target.value)}
-                                updateCity={(city) => setCity(city)}
-                                updateCityObj={(city) => setCityObj(city)}
-                            />
-                        </div>
-
-                        <div className="mymap">
-                            {cityRes && (
-                                <MyMap
-                                    lon={cityRes?.coord?.lon}
-                                    lat={cityRes?.coord?.lat}
-                                    name={cityRes?.name}
-                                    fetchWeatherUsingCoordinates={fetchWeatherUsingCoordinates}
-                                    temp={cityRes?.main.feels_like}
+                            <div className="searchbox">
+                                <SearchOption
+                                    city={city}
+                                    onChange={(event) => setCity(event.target.value)}
+                                    updateCity={(city) => setCity(city)}
+                                    updateCityObj={(city) => setCityObj(city)}
                                 />
-                            )}
+                            </div>
+
+                            <div className="mymap">
+                                {cityRes && (
+                                    <MyMap
+                                        lon={cityRes?.coord?.lon}
+                                        lat={cityRes?.coord?.lat}
+                                        name={cityRes?.name}
+                                        fetchWeatherUsingCoordinates={fetchWeatherUsingCoordinates}
+                                        temp={cityRes?.main.feels_like}
+                                    />
+                                )}
+                            </div>
                         </div>
+                        <>
+                            <WeatherInfo
+                                results={results}
+                                city={cityRes}
+                                changeUnit={changeUnit}
+                            />
+                            <div>
+                                <RequiredItems results={cityRes} />
+                            </div>
+                        </>
                     </div>
                 </div>
-            )}
-
-            {isLoaded && results && error == null && (
-                <>
-                    <WeatherInfo
-                        results={results}
-                        city={cityRes}
-                        changeUnit={changeUnit}
-                    />
-                    <div>
-                        <RequiredItems results={cityRes} />
-                    </div>
-                </>
             )}
         </>
     );

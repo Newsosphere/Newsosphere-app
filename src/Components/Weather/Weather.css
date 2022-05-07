@@ -1,0 +1,39 @@
+.Weather{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Weather-container{
+    height: 100%;
+    width: 90%;
+    /* background-color: antiquewhite; */
+}
+
+.Weather-search-map{
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.Weather-subheading{
+    width: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Weather-search{
+    width: 100%;
+    /* background-color: blueviolet; */
+}
+
+.mymap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    /* background-color: aquamarine; */
+}

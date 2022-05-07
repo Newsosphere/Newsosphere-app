@@ -192,6 +192,9 @@ const useWeather = () => {
         useFahrenheit,
         cityObj,
         setCityObj,
+        setCityRes,
+        setIsLoading,
+        setError
     };
 };
 

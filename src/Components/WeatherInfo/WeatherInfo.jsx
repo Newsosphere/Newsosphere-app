@@ -6,6 +6,9 @@ import weatherIcon from '../../Helpers/weatherIcon';
 import moment from 'moment'
 import 'moment-timezone'
 
+// Styles
+import './WeatherInfo.css'
+
 const WeatherInfo = ({ results, city }) => {
 
     // console.log(city);
@@ -78,10 +81,7 @@ const WeatherInfo = ({ results, city }) => {
                     </div>
                 </div>
                 <div className="hourly-chart">
-                    <h2>Hourly Forecast</h2>
-                    <div>
-                        <HourlyForecast results={results} />
-                    </div>
+                    <HourlyForecast results={results} />
                 </div>
             </div>
             <DailyForecast results={results} />

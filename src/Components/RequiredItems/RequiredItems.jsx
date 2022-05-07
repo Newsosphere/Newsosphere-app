@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import requiredItems from "../../Helpers/requiredItems";
 
+// Styles
+import './RequiredItems.css'
+
 const RequiredItems = (props) => {
     const [items, setItems] = useState([]);
 
@@ -12,7 +15,7 @@ const RequiredItems = (props) => {
         <div className="required-things-container">
             {Object.keys(items).length > 0 && (
                 <>
-                    <h1>Don't forget to bring your</h1>
+                    <h2>Don't forget to bring your</h2>
                     <div className="required-things">
                         {Object.keys(items).map((item, i) => (
                             <div className="card-item">

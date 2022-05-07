@@ -6,7 +6,6 @@ import News from './Components/News/News'
 import Navbar from './Components/Navbar/Navbar'
 
 export default function App() {
-  console.log(process.env)
   return (
     <BrowserRouter>
       <Navbar />

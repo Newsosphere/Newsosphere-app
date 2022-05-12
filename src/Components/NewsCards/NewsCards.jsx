@@ -4,22 +4,19 @@ import { Grid, Grow, Typography } from "@material-ui/core";
 import useStyles from "./styles.js";
 
 const infoCards = [
-  { color: "#00838f", title: "Latest News", text: "Give me the latest news" },
+  { title: "Latest News", text: "Give me the latest news" },
   {
-    color: "#1565c0",
     title: "News by Categories",
     info:
       "Business, Entertainment, General, Health, Science, Sports, Technology",
     text: "Give me the latest Health news",
   },
   {
-    color: "#4527a0",
     title: "News by Terms",
     info: "Bitcoin, PlayStation 5, Smartphones, Donald Trump...",
     text: "What's up with PlayStation 5",
   },
   {
-    color: "#283593",
     title: "News by Sources",
     info: "BBC News, Buzzfeed, ABC News...",
     text: "Give me the news from Buzzfeed",
@@ -49,9 +46,8 @@ function NewsCards({ articles, activeArticle }) {
             >
               <div
                 className={classes.card}
-                style={{ backgroundColor: infoCard.color }}
               >
-                <Typography variant="h6">{infoCard.title}</Typography>
+                <Typography variant="h6" style={{ color: "#353535", fontWeight: "700" }}>{infoCard.title}</Typography>
                 {infoCard.info ? (
                   <Typography variant="body1">
                     <strong>{infoCard.title.split(" ")[2]}</strong>

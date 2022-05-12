@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
+import { useNavigate } from 'react-router-dom'
 import MyMap from '../MyMap/MyMap';
 import Loader from "../Loader/Loader";
 import WeatherInfo from "../WeatherInfo/WeatherInfo";
 // import HourlyForecast from "../HourlyForecast/HourlyForecast";
+import alanBtn from "@alan-ai/alan-sdk-web";
 import RequiredItems from "../RequiredItems/RequiredItems";
 import useWeather from '../../Helpers/Hooks/useWeather'
 import SearchOption from '../../Helpers/SearchOption'
@@ -10,7 +12,7 @@ import SearchOption from '../../Helpers/SearchOption'
 // Styles
 import './Weather.css'
 
-const Weather = () => {
+const Weather = (props) => {
     const {
         city,
         results,
@@ -22,10 +24,11 @@ const Weather = () => {
         changeUnit,
         useFahrenheit,
         setCityObj,
-    } = useWeather();
+    } = props;
+
+    const navigate = useNavigate();
 
     // useEffect(() => {
-    //     //adding alan ai button on home page
     //     alanBtn({
     //         key: process.env.REACT_APP_ALAN_APIKEY,
     //         onCommand: function (commandData) {
@@ -33,8 +36,10 @@ const Weather = () => {
     //                 //setting city to show the weather of the vity asked through voice command
     //                 setCity(commandData.cityname.value);
     //             }
+    //             if (commandData.command === "navigate") {
+    //                 navigate(commandData.route);
+    //             }
     //         },
-    //         zIndex: 10000000,
     //     });
     // }, []);
 

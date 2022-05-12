@@ -43,7 +43,7 @@ const useWeather = () => {
                     }
                 });
         }
-    }, [cityObj]);
+    }, [cityObj, city, cityRes]);
 
     useEffect(() => {
         //Toast added for informing users about the voice assistant
@@ -138,7 +138,7 @@ const useWeather = () => {
                     );
             }
         }
-    }, [longi, latit, useFahrenheit, debouncedSearchTerm]);
+    }, [longi, latit, useFahrenheit, debouncedSearchTerm, city, cityObj, cityRes]);
 
     useEffect(() => {
         let unit = useFahrenheit ? "imperial" : "metric";

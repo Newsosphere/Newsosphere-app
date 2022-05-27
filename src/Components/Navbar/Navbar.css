@@ -43,3 +43,60 @@
 .Navbar-links>a:hover{
     color:#4FCAFF;
 }
+
+.Navbar-hamburger{
+    display: none;
+    border-radius: 10px;
+    border: 3px solid #35353500;
+    transition: all 0.3s ease-in-out;
+}
+
+.Navbar-hamburger:hover{
+    border: 3px solid #35353559;
+    cursor: pointer;
+}
+
+.Navbar-dropdown{
+    width: 100%;
+    background-color: #ffffff;
+    backdrop-filter: blur(50px);
+    padding: 30px 0;
+    position: absolute;
+    top: 100%;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.Navbar-dropdown-links{
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-between;
+    margin: 0 30px;
+}
+
+.Navbar-dropdown-links>a{
+    text-decoration: none;
+    color: #353535;
+    transition: all 0.2s ease-in-out;
+}
+
+.Navbar-dropdown-links>a:hover{
+    color: #4FCAFF;
+}
+
+@media screen and (max-width: 800px){
+    .Navbar{
+        background-color: white;
+    }
+    .Navbar-links{
+        display: none;
+    }
+    .Navbar-hamburger{
+        display: block;
+    }
+    .Navbar-dropdown{
+        display: block;
+    }
+}

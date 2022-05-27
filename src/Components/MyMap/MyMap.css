@@ -29,3 +29,9 @@
 .MyMap-popup-container>h3 {
     opacity: 0.7;
 }
+
+@media screen and (max-width: 600px) {
+    .MyMap{
+        width: 100%;
+    }
+}
